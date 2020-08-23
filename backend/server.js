@@ -26,7 +26,7 @@ app.use(cors());
 
 
 app.get('/', (req, res) => {
-    //res.send(database.users);
+    res.send('Backend is working');
 })
 
 app.get('/profile/:id', (req, res) => { profile.handleProfileGet(req, res, db) })
