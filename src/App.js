@@ -10,7 +10,7 @@ import './App.css';
 import 'tachyons';
 import Particles from 'react-particles-js';
 
-
+const ec2Endpoint = "http://ec2-54-237-115-242.compute-1.amazonaws.com:3000";
 
 
 const particlesOptions = {
@@ -60,7 +60,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3000')
+    fetch(ec2Endpoint)
       .then(response => response.json())
       .then(console.log);
   }
@@ -97,7 +97,7 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({ imageUrl: this.state.input });
-    fetch('http://localhost:3000/imageurl', {
+    fetch(ec2Endpoint + '/imageurl', {
       method: 'post',
       headers: {
         'Content-Type': 'application/json'
@@ -109,7 +109,7 @@ class App extends Component {
       .then(response => response.json())
       .then(response => {
         if (response) {
-          fetch('http://localhost:3000/image', {
+          fetch(ec2Endpoint + '/image', {
             method: 'put',
             headers: {
               'Content-Type': 'application/json'

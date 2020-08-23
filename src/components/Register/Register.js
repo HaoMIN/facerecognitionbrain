@@ -1,6 +1,7 @@
 import React from 'react';
 
 class Register extends React.Component {
+
     constructor(props) {
         super();
         this.state = {
@@ -23,7 +24,8 @@ class Register extends React.Component {
     };
 
     onSubmitSignIn = () => {
-        fetch('http://localhost:3000/register', {
+        const ec2Endpoint = "http://ec2-54-237-115-242.compute-1.amazonaws.com:3000";
+        fetch(ec2Endpoint + '/register', {
             method: 'post',
             headers: {
                 'Content-Type': 'application/json'
