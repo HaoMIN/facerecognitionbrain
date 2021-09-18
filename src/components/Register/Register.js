@@ -24,7 +24,7 @@ class Register extends React.Component {
     };
 
     onSubmitSignIn = () => {
-        const ec2Endpoint = "https://ec2-54-196-112-71.compute-1.amazonaws.com:3000";
+        const ec2Endpoint = "http://ec2-54-196-112-71.compute-1.amazonaws.com:3000";
         fetch(ec2Endpoint + '/register', {
             method: 'post',
             headers: {
