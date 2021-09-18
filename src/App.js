@@ -10,7 +10,7 @@ import './App.css';
 import 'tachyons';
 import Particles from 'react-particles-js';
 
-const ec2Endpoint = "https://ec2-54-237-115-242.compute-1.amazonaws.com:3000";
+const ec2Endpoint = "https://ec2-54-196-112-71.compute-1.amazonaws.com:3000";
 
 
 const particlesOptions = {
