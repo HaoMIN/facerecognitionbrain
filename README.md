@@ -35,7 +35,7 @@ You can start the application locally. In the project directory, you can run:
 
 You might be asked if you want to use another port other than 3000, as 3000 might be used already by the backend. Just simply type "Y". It will use another port (e.g.: 3001) for the frontend.
 
-Then you should be able to open the application via [http://localhost:3001](http://localhost:3000).
+Then you should be able to open the application via [http://localhost:3001](http://localhost:3001).
 
 **Hint:** 
 
