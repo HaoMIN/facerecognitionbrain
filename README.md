@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-The web application **Smart Brain** is the final project of the Udemy class [The Complete Web Developer in 2021: Zero to Mastery](https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/). The application is deployed current in [AWS](https://aws.amazon.com/). In the class, the application is deployed in [Heroku](https://www.heroku.com/).
+The web application **[Smart Brain](http://smartbrainaws.s3-website-us-east-1.amazonaws.com)** is the final project of the Udemy class [The Complete Web Developer in 2021: Zero to Mastery](https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/). The application is deployed current in [AWS](https://aws.amazon.com/). In the class, the application is deployed in [Heroku](https://www.heroku.com/).
 
 The application is a classic web application which consists of three parts:
 1. UI (React -> AWS S3)
