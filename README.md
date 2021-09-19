@@ -1,68 +1,44 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+The web application **Smart Brain** is the final project of the Udemy class [The Complete Web Developer in 2021: Zero to Mastery](https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/). The application is deployed current in [AWS](https://aws.amazon.com/). In the class, the application is deployed in [Heroku](https://www.heroku.com/).
 
-In the project directory, you can run:
+The application is a classic web application which consists of three parts:
+1. UI (React)
+2. Backend (Node.js -> express)
+3. Database (AWS RDS -> Postgresql)
 
-### `npm start`
+The UI part is hosted by **AWS S3** as a static website. The bucked is public facing and the user can access the application via this [link](http://smartbrainaws.s3-website-us-east-1.amazonaws.com). 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The backend and database are hosted in a VPC of AWS. The database is hidden from the public and can only accessed by an EC2 instance in the same VPC.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+**Note:** *This application does not match all security standards. E.g.: not SSL secured, as AWS S3 does not provide HTTPS for the buckets which are configured to be a static website host. In order to get a certificate for SSL, one can use e.g. Route53 to apply for a domain and certificate.*
+<br />
+<br />
+![Smart Brain](SmartBrain.jpg)
+<br />
+<br />
+![Smart Brain UI](SmartBrainLogin.jpg)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## How to start?
+You can start the application locally. In the project directory, you can run:
 
-### `npm run build`
+**Start the backend:**
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    cd .\facerecognitionbrain\backend
+    npm start
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+**Start the frontend:**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    cd .\facerecognitionbrain
+    npm start
 
-### `npm run eject`
+You might be asked if you want to use another port other than 3000, as 3000 might be used already by the backend. Just simply type "Y". It will use another port (e.g.: 3001) for the frontend.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Then you should be able to open the application via [http://localhost:3001](http://localhost:3000).
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Hint:** If it complains about missing module, you can run 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+    npm install
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+for both backend and frontend parts.
