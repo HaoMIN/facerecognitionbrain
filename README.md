@@ -7,7 +7,7 @@ The application is a classic web application which consists of three parts:
 2. Backend (Node.js -> express -> AWS EC2)
 3. Database (AWS RDS -> Postgresql)
 
-The UI part is hosted by **AWS S3** as a static website. The bucked is public facing and the user can access the application via this [link](http://smartbrainaws.s3-website-us-east-1.amazonaws.com). 
+The UI part is hosted by **AWS S3** as a static website. The bucket is public facing and the user can access the application via this [link](http://smartbrainaws.s3-website-us-east-1.amazonaws.com). 
 
 The backend and database are hosted in a VPC of AWS. The database is hidden from the public and can only accessed by an EC2 instance in the same VPC.
 
