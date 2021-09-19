@@ -37,8 +37,22 @@ You might be asked if you want to use another port other than 3000, as 3000 migh
 
 Then you should be able to open the application via [http://localhost:3001](http://localhost:3000).
 
-**Hint:** If it complains about missing module, you can run 
+**Hint:** 
+
+If it complains about missing module, you can run 
 
     npm install
 
 for both backend and frontend parts.
+
+You need to replace the Clarifai api key with your own key under:
+
+    .\backend\image
+
+You need to replace with your own EC2 instance public address and database information under:
+
+    .\backend\server.js
+    .\backend\controllers\image.js
+    .\App.js
+    .\ImageLinkForm.js
+    .\SignIn.js

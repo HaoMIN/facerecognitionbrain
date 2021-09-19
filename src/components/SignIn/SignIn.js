@@ -18,7 +18,7 @@ class SignIn extends React.Component {
     };
 
     onSubmitSignIn = () => {
-        const ec2Endpoint = "http://ec2-54-196-112-71.compute-1.amazonaws.com:3000";
+        const ec2Endpoint = "replace with your EC2 instance public address";
         fetch(ec2Endpoint + '/signin', {
             method: 'post',
             headers: {

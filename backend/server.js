@@ -10,10 +10,10 @@ const image = require('./controllers/image');
 const db = knex({
     client: 'pg',
     connection: {
-        host: 'smartbrain.crbxwvbeoo3i.us-east-1.rds.amazonaws.com',
-        user: 'postgres',
-        password: 'smartbrainaws',
-        database: 'smartbrain'
+        host: 'your own DB host',
+        user: 'your user',
+        password: 'your password',
+        database: 'your database'
     },
 })
 
