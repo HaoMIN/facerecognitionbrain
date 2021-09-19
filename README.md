@@ -3,8 +3,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 The web application **Smart Brain** is the final project of the Udemy class [The Complete Web Developer in 2021: Zero to Mastery](https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/). The application is deployed current in [AWS](https://aws.amazon.com/). In the class, the application is deployed in [Heroku](https://www.heroku.com/).
 
 The application is a classic web application which consists of three parts:
-1. UI (React)
-2. Backend (Node.js -> express)
+1. UI (React -> AWS S3)
+2. Backend (Node.js -> express -> AWS EC2)
 3. Database (AWS RDS -> Postgresql)
 
 The UI part is hosted by **AWS S3** as a static website. The bucked is public facing and the user can access the application via this [link](http://smartbrainaws.s3-website-us-east-1.amazonaws.com). 
